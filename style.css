@@ -1,0 +1,270 @@
+html{
+    font-family: 'Roboto', sans-serif;
+}
+.desk-game{
+    width: 100%;
+    height: 600px; 
+    display: flex;  
+}
+.img{
+    width: 100%;
+    height: 400 px;
+    margin-top: 20%;
+}
+.action{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.play{
+    font-size: 3rem;
+}
+.app{
+    display: flex;
+    background-image: url('./bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    left: 50%;
+    bottom: 8%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    height: 600px;
+}
+.content{
+    width: 100%;
+    height: 100%;   
+}
+.info-game{
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #000;
+}
+.screen-game{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.select{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.select__item{
+    width: 12%;
+    height: 130px;
+    margin: 0 40px;
+    position: absolute;
+}
+.keo{
+    left: 10%;
+    
+}
+.bua{
+    left: 39%;
+}
+.bao{
+    right: 10%;
+}
+.img-skill{
+    width: 100%;
+    height: 100%;
+}
+.skill-keo{
+    position: absolute;
+    left: 0;    
+}
+.skill-keo:checked ~ .keo{
+    border: 1px solid red;
+    animation: selectKeo linear infinite 0.2s;
+}
+.skill-bua:checked ~ .bua{
+    border: 1px solid red;
+    animation: selectBua linear infinite 0.2s;
+}
+.skill-bao:checked ~ .bao{
+    border: 1px solid red;
+    animation: selectBao linear infinite 0.2s;
+}
+.skill-bua{
+    position: absolute;
+    left: 0; 
+}
+.skill-bao{
+    position: absolute; 
+    left: 0; 
+}
+@keyframes selectKeo{
+    to{
+        left: calc( 10% - 1px);
+    }
+    from{
+        left: calc( 10% + 2px);
+    }
+}
+@keyframes selectBua{
+    to{
+        left: calc( 39% - 1px);
+    }
+    from{
+        left: calc( 39% + 2px);
+    }
+}
+@keyframes selectBao{
+    to{
+        right: calc( 10% - 1px);
+    }
+    from{
+        right: calc( 10% + 2px);
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #24272E;
+}
+
+header {
+    background: white;
+    padding: 20px;
+}
+
+header > h1 {
+    color: #24272E;
+    text-align: center;
+    font-family: Inter, sans-serif;
+}
+
+.score-board {
+    margin: 40px auto 60px;
+    border: 3px solid white;
+    border-radius: 4px;
+    width: 200px;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+    left: 320px;
+    top: 160px;
+    z-index: 2;
+}
+.result{
+    top: 260px;
+    position: relative;
+}
+
+.badge {
+    background-color: #E25840;
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+}
+
+#user-label {
+    position: absolute;
+    top: 30px;
+    left: -25px;
+}
+
+#computer-label {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+.result {
+    font-size: 30px;
+    color: white;
+}
+
+.result > p {
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+}
+
+.choices {
+    margin: 50px 0;
+    text-align: center;
+    user-select: none;
+}
+
+.choice {
+    display: inline-block;
+    font-size: 60px;
+    padding: 20px 20px;
+    margin: 0 10px;
+    transition: all 0.3ms ease;
+}
+
+.choice:hover {
+    cursor: pointer;
+    transform: scale(2);
+}
+
+#action-message {
+    text-align: center;
+    color: #F0f0f0;
+}
+/* Mobile: < 740px */
+@media screen and (max-width: 46.1875em) {
+    .score-board {
+        margin: 40px auto 60px;
+        border: 3px solid white;
+        border-radius: 4px;
+        width: 200px;
+        color: white;
+        font-size: 45px;
+        text-align: center;
+        padding: 15px 20px;
+        position: relative;
+        left: 60px;
+        top: -30px;
+        z-index: 2;
+    }
+    .result{
+        top: 200px;
+        position: relative;
+    }
+    .pc{
+        display: none;
+    }
+    .choices{
+        top: 60px;
+        position: relative;
+    }
+    .mobile{
+        top: 40px;
+        position: relative;
+    }
+    .img{
+        top: 40px;
+        position: relative;
+    }
+}
+/* Tablet: 740px < Tablet < 1023px */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    .tablet{
+        display: block;
+    }
+}
+/* Pc: >1024px */
+@media screen and (min-width: 64em) {
+    .pc{
+        display: block;
+    }
+}

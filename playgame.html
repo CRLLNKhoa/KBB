@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid index2">
+        <div class="row wide">
+            <div class="col l-2">
+                <div class="score-board">
+                    <div id="user-label" class="badge">Bạn</div>
+                    <div id="computer-label" class="badge">Máy</div>
+                    <span id="user-score">0</span>:<span id="computer-score">0</span>
+                </div>
+            </div>
+            <div class="col l-8 app">
+                <div class="content">
+                   <div class="row">
+                        <div class="col l-4 m-4 c-12">
+                            <div class="info-game">
+                                <div class="result">
+                                    <p>Bao vs Búa. Bao Thắng!!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-8 m-8 c-12">
+                            <div class="screen-game">
+                                <h2 class="pc">Click vào hình muốn chọn</h2>
+                                <div class="choices">
+                                    <div class="choice" id="s">
+                                        ✌️
+                                    </div>
+                                    <div class="choice" id="r">
+                                        ✊
+                                    </div>
+                                    <div class="choice" id="p">
+                                        🖐️
+                                    </div>
+                                </div>
+                                <h2 class="pc">Lượt bạn</h2>
+                                <h2 class="mobile">Click chọn</h2>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col l-2"></div>
+        </div>
+    </div>
+
+</body>
+<script src="./main.js"></script>
+</html>
